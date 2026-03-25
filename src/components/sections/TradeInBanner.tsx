@@ -1,0 +1,34 @@
+import ImageWithFallback from '@/components/ui/ImageWithFallback'
+import { IMG_TRADEIN_DRIVER } from '@/lib/images'
+
+export default function TradeInBanner() {
+  return (
+    <section id="trade-in" className="mt-12 relative min-h-[480px] overflow-hidden bg-[#f0efec] flex items-center">
+      {/* Club image — floats left */}
+      <div className="absolute left-0 top-0 bottom-0 w-[52%] overflow-hidden">
+        <ImageWithFallback
+          src={IMG_TRADEIN_DRIVER} alt="Golf club for trade-in"
+          fill className="object-contain object-bottom"
+          fallbackColor="#e8e4d8" fallbackLabel="tradein-driver.jpg"
+          loading="lazy"
+          sizes="52vw"
+        />
+      </div>
+      {/* Text zone */}
+      <div className="ml-auto w-1/2 pr-[72px] pl-8 py-16 text-right">
+        <h2 className="font-display font-black leading-none mb-4 text-[#1a1a18]" style={{ fontSize: 'clamp(48px, 6vw, 80px)' }}>
+          Trade in.<br />Trade up.
+        </h2>
+        <p className="text-[15px] text-[#7a7870] max-w-[400px] ml-auto leading-relaxed mb-7 text-center">
+          Get an instant quote for your current clubs. No appointments, no awkward negotiations — just a fair price, fast.
+        </p>
+        <a
+          href="/sell"
+          className="inline-block bg-[#1a1a18] text-white text-[11px] font-bold uppercase tracking-[0.15em] px-9 py-4 hover:bg-[#2e4a2c] transition-colors"
+        >
+          Start Your Trade-In
+        </a>
+      </div>
+    </section>
+  )
+}
