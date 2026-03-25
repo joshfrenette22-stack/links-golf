@@ -14,7 +14,7 @@ export default function MapSection() {
       {/* Map pin */}
       <div className="absolute top-[45%] left-[46%] w-8 h-8 bg-[#2e4a2c] rounded-[50%_50%_50%_0] rotate-[-45deg] shadow-md" />
       {/* Info card */}
-      <div className="absolute right-12 top-1/2 -translate-y-1/2 w-[320px] bg-white p-8 shadow-[0_8px_40px_rgba(0,0,0,0.15)] rounded-sm">
+      <div className="absolute right-0 md:right-12 left-0 md:left-auto bottom-0 md:bottom-auto top-auto md:top-1/2 md:-translate-y-1/2 w-full md:w-[320px] bg-white p-8 shadow-none md:shadow-[0_8px_40px_rgba(0,0,0,0.15)] rounded-none md:rounded-sm border-t md:border-t-0 border-[#e8e6e0]">
         <h3 className="font-extrabold text-[22px] mb-4">Visit our shop</h3>
         <p className="text-sm text-[#7a7870] leading-relaxed mb-2">2240 Larimer Street<br />Denver, CO 80205</p>
         <p className="text-sm text-[#7a7870] leading-relaxed mb-6">Mon–Sat: 9:00am–6:00pm<br />Sun: 10:00am–4:00pm<br /><span className="text-[#2e4a2c]">Walk-in appraisals welcome. Bring your bag.</span></p>

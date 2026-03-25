@@ -4,7 +4,7 @@ import { IMG_SHOP_INTERIOR } from '@/lib/images'
 export default function AboutSection() {
   return (
     <section id="about" className="grid grid-cols-1 md:grid-cols-2 min-h-[520px]">
-      <div className="bg-[#1c2e1a] px-16 py-20 flex flex-col justify-center">
+      <div className="bg-[#1c2e1a] px-8 md:px-16 py-14 md:py-20 flex flex-col justify-center">
         <h2 className="font-display font-extrabold text-white mb-6 leading-tight" style={{ fontSize: 'clamp(36px, 4vw, 56px)' }}>
           Get to know us
         </h2>
@@ -23,7 +23,7 @@ export default function AboutSection() {
           Our Story
         </a>
       </div>
-      <div className="relative min-h-[400px] md:min-h-0">
+      <div className="hidden md:block relative md:min-h-0">
         <ImageWithFallback
           src={IMG_SHOP_INTERIOR} alt="LINKS Golf shop interior"
           fill className="object-cover"

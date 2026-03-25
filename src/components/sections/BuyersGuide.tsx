@@ -8,7 +8,7 @@ const cards = [
 
 export default function BuyersGuide() {
   return (
-    <section id="buyers-guide" className="px-12 py-16">
+    <section id="buyers-guide" className="px-4 md:px-12 py-10 md:py-16">
       <div className="mb-8">
         <h2 className="text-2xl font-extrabold mb-3">Build your bag on a budget</h2>
         <p className="text-[#7a7870] text-[15px] max-w-2xl leading-relaxed">
@@ -17,7 +17,7 @@ export default function BuyersGuide() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
         {/* Main image */}
-        <div className="h-[480px] relative rounded overflow-hidden">
+        <div className="h-[280px] md:h-[480px] relative rounded overflow-hidden">
           <ImageWithFallback
             src={IMG_BUYERS_GUIDE_MAIN} alt="Golfer walking the fairway with a push cart"
             fill className="object-cover"
@@ -29,7 +29,7 @@ export default function BuyersGuide() {
         {/* Sub-cards */}
         <div className="md:col-span-2 grid grid-cols-2 gap-4">
           {cards.map(card => (
-            <div key={card.label} className="relative rounded overflow-hidden cursor-pointer group h-[480px]">
+            <div key={card.label} className="relative rounded overflow-hidden cursor-pointer group h-[280px] md:h-[480px]">
               <ImageWithFallback
                 src={card.src} alt={card.label} fill
                 className="object-cover group-hover:scale-[1.03] transition-transform duration-500"

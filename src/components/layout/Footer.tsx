@@ -2,7 +2,7 @@ import { Camera, Play, Music2, Globe } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#2e4a2c] text-white pt-16 pb-10 px-12">
+    <footer className="bg-[#2e4a2c] text-white pt-16 pb-10 px-6 md:px-12">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         {/* Quick Links */}
         <div>
@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row flex-wrap justify-between items-center gap-4">
         <div className="flex items-center gap-4">
           <select className="bg-transparent text-white/70 text-xs border border-white/30 px-2 py-1">
             <option>United States (USD $)</option>

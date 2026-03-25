@@ -19,7 +19,7 @@ export default function YouTubeSection() {
           Watch Now
         </a>
       </div>
-      <div className="bg-[#2e2618] flex items-center justify-center overflow-hidden min-h-[400px] md:min-h-0">
+      <div className="hidden md:flex bg-[#2e2618] items-center justify-center overflow-hidden">
         <div className="w-[380px] h-[440px] bg-white rounded-sm shadow-[0_20px_60px_rgba(0,0,0,0.4)] relative top-5 overflow-hidden">
           <ImageWithFallback
             src={IMG_YOUTUBE_THUMBNAIL} alt="LINKS Golf YouTube channel"

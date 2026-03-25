@@ -3,7 +3,7 @@ import ProductCard from '@/components/ui/ProductCard'
 
 export default function BestSellers() {
   return (
-    <section id="best-sellers" className="px-12 pt-12 pb-12">
+    <section id="best-sellers" className="px-4 md:px-12 pt-12 pb-12">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-extrabold">Best selling clubs</h2>
         <a href="/shop" className="bg-[#1a1a18] text-white text-[11px] font-bold uppercase tracking-wider px-5 py-2.5 hover:bg-[#2e4a2c] transition-colors">

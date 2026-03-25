@@ -10,7 +10,7 @@ export default function DualPromoBanners() {
   return (
     <section id="promo-banners" className="grid grid-cols-1 md:grid-cols-2">
       {banners.map((b, i) => (
-        <div key={i} className="relative h-[300px] overflow-hidden flex items-end pb-7 pl-8 cursor-pointer group">
+        <div key={i} className="relative h-[240px] md:h-[300px] overflow-hidden flex items-end pb-7 pl-8 cursor-pointer group">
           <ImageWithFallback
             src={b.src} alt={b.text} fill
             className="object-cover group-hover:scale-[1.04] transition-transform duration-500"

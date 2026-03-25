@@ -5,7 +5,7 @@ export default function TradeInBanner() {
   return (
     <section id="trade-in" className="mt-12 relative min-h-[480px] overflow-hidden bg-[#f0efec] flex items-center">
       {/* Club image — floats left */}
-      <div className="absolute left-0 top-0 bottom-0 w-[52%] overflow-hidden">
+      <div className="hidden md:block absolute left-0 top-0 bottom-0 w-[52%] overflow-hidden">
         <ImageWithFallback
           src={IMG_TRADEIN_DRIVER} alt="Golf driver for trade-in"
           fill className="object-contain object-bottom"
@@ -15,7 +15,7 @@ export default function TradeInBanner() {
         />
       </div>
       {/* Text zone */}
-      <div className="ml-auto w-1/2 pr-[72px] pl-8 py-16 text-right">
+      <div className="w-full md:w-1/2 md:ml-auto px-8 md:pr-[72px] md:pl-8 py-12 md:py-16 text-center md:text-right">
         <h2 className="font-display font-black leading-none mb-4 text-[#1a1a18]" style={{ fontSize: 'clamp(48px, 6vw, 80px)' }}>
           Trade in.<br />Trade up.
         </h2>

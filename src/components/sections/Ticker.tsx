@@ -13,7 +13,7 @@ export default function Ticker() {
         {doubled.map((item, i) => (
           <span
             key={i}
-            className="inline-flex text-[12px] font-semibold uppercase tracking-[0.1em] px-10 border-r border-white/20"
+            className="inline-flex text-[10px] md:text-[12px] font-semibold uppercase tracking-[0.1em] px-6 md:px-10 border-r border-white/20"
           >
             {item}
           </span>

@@ -11,7 +11,7 @@ export default function PhotoGrid() {
   return (
     <section id="photo-grid" className="grid grid-cols-2 md:grid-cols-4">
       {cells.map((cell, i) => (
-        <div key={i} className="h-[380px] md:h-[380px] relative overflow-hidden cursor-pointer group">
+        <div key={i} className="h-[220px] md:h-[380px] relative overflow-hidden cursor-pointer group">
           <ImageWithFallback
             src={cell.img} alt={cell.product} fill
             className="object-cover"

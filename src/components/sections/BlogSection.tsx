@@ -3,12 +3,12 @@ import ImageWithFallback from '@/components/ui/ImageWithFallback'
 
 export default function BlogSection() {
   return (
-    <section id="blog" className="px-12 py-16">
+    <section id="blog" className="px-4 md:px-12 py-10 md:py-16">
       <h2 className="font-extrabold text-2xl mb-8">From the blog</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
         {BLOG_POSTS.map(post => (
           <article key={post.id}>
-            <div className="h-[240px] rounded-sm overflow-hidden mb-3.5 relative">
+            <div className="h-[200px] md:h-[240px] rounded-sm overflow-hidden mb-3.5 relative">
               <ImageWithFallback
                 src={post.imageSrc} alt={post.title} fill
                 className="object-cover"

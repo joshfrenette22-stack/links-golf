@@ -3,8 +3,8 @@ import { IMG_INSPECTION_WORKSHOP } from '@/lib/images'
 
 export default function InspectionSplit() {
   return (
-    <section id="inspection" className="mx-12 rounded overflow-hidden grid grid-cols-1 md:grid-cols-2">
-      <div className="h-[580px] relative">
+    <section id="inspection" className="mx-4 md:mx-12 rounded overflow-hidden grid grid-cols-1 md:grid-cols-2">
+      <div className="hidden md:block h-[580px] relative">
         <ImageWithFallback
           src={IMG_INSPECTION_WORKSHOP} alt="Club inspection workshop"
           fill className="object-cover"

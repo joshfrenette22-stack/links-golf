@@ -24,7 +24,7 @@ export default function CategoryShowcase() {
           ))}
         </nav>
       </div>
-      <div className="bg-[#2a2018] relative overflow-hidden min-h-[300px] md:min-h-0">
+      <div className="hidden md:block bg-[#2a2018] relative overflow-hidden md:min-h-0">
         <ImageWithFallback
           src={IMG_CATEGORY_CLUBS} alt="Golf club categories"
           fill className="object-cover opacity-60"
