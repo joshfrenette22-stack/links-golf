@@ -1,4 +1,4 @@
-import { PRODUCTS } from '@/lib/data'
+import { BESTSELLER_PRODUCTS } from '@/lib/data'
 import ProductCard from '@/components/ui/ProductCard'
 
 export default function BestSellers() {
@@ -11,7 +11,7 @@ export default function BestSellers() {
         </a>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-        {PRODUCTS.slice(0, 5).map(p => (
+        {BESTSELLER_PRODUCTS.map(p => (
           <ProductCard key={p.id} product={p} size="lg" />
         ))}
       </div>

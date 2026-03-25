@@ -13,7 +13,7 @@ export default function CollectionTiles() {
               src={col.imageSrc} alt={col.name} fill
               className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
               fallbackColor={fallbacks[i]}
-              fallbackLabel={`${col.id}.jpg`}
+              fallbackLabel={`collection-${col.id}.jpg`}
               loading="lazy"
               sizes="(max-width: 768px) 100vw, 50vw"
             />

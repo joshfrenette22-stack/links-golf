@@ -16,8 +16,8 @@ export default function MapSection() {
       {/* Info card */}
       <div className="absolute right-12 top-1/2 -translate-y-1/2 w-[320px] bg-white p-8 shadow-[0_8px_40px_rgba(0,0,0,0.15)] rounded-sm">
         <h3 className="font-extrabold text-[22px] mb-4">Visit our shop</h3>
-        <p className="text-sm text-[#7a7870] leading-relaxed mb-2">147 Fairway Lane<br />Austin, TX 78701</p>
-        <p className="text-sm text-[#7a7870] leading-relaxed mb-6">Mon–Sat: 9am–6pm<br />Sunday: 11am–4pm<br /><span className="text-[#2e4a2c]">Free appraisals on walk-ins</span></p>
+        <p className="text-sm text-[#7a7870] leading-relaxed mb-2">2240 Larimer Street<br />Denver, CO 80205</p>
+        <p className="text-sm text-[#7a7870] leading-relaxed mb-6">Mon–Sat: 9:00am–6:00pm<br />Sun: 10:00am–4:00pm<br /><span className="text-[#2e4a2c]">Walk-in appraisals welcome. Bring your bag.</span></p>
         <a
           href="https://maps.google.com"
           target="_blank"

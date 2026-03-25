@@ -19,14 +19,12 @@ export default function BuyersGuide() {
         {/* Main image */}
         <div className="h-[480px] relative rounded overflow-hidden">
           <ImageWithFallback
-            src={IMG_BUYERS_GUIDE_MAIN} alt="Buyer's guide main"
+            src={IMG_BUYERS_GUIDE_MAIN} alt="Golfer walking the fairway with a push cart"
             fill className="object-cover"
             fallbackColor="#c0b890" fallbackLabel="buyers-guide-main.jpg"
             loading="lazy"
             sizes="33vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-          <p className="absolute bottom-4 left-4 text-white font-extrabold text-lg">Read the guide</p>
         </div>
         {/* Sub-cards */}
         <div className="md:col-span-2 grid grid-cols-2 gap-4">

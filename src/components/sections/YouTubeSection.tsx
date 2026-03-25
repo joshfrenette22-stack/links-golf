@@ -7,13 +7,13 @@ export default function YouTubeSection() {
       <div className="bg-[#5a4e38] px-16 py-20 flex flex-col justify-center">
         <h2 className="font-display font-extrabold text-white text-2xl md:text-4xl mb-6">We&apos;re on YouTube</h2>
         <p className="text-white/80 text-[14px] leading-relaxed mb-4">
-          Reviews, fittings, and side-by-side comparisons — our channel covers everything you need to make the right call when buying pre-owned.
+          Watch our club fitters tear down, inspect, and review the equipment that comes through our doors. No sponsored content — just honest takes from people who play the game.
         </p>
         <p className="text-white/80 text-[14px] leading-relaxed mb-4">
-          From beginner builds to low-handicap upgrades, we break down the market so you don&apos;t have to.
+          From head-to-head driver testing to deep dives on iron sets by handicap range, every video is built to help you buy smarter and play better.
         </p>
         <p className="text-white/80 text-[14px] leading-relaxed mb-7">
-          New videos every week. Subscribe and never miss a deal.
+          New videos every Tuesday and Friday. Subscribe and join over 40,000 golfers who trust our gear advice.
         </p>
         <a href="#" className="inline-block border border-white/60 text-white text-[11px] font-bold uppercase tracking-[0.15em] px-8 py-3.5 hover:bg-white hover:text-[#1a1a18] transition-colors self-start mt-7">
           Watch Now

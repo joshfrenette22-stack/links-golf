@@ -22,9 +22,9 @@ export default function Hero() {
         />
       </div>
       {/* Content */}
-      <div className="absolute bottom-18 left-16 z-10">
+      <div className="absolute bottom-16 left-16 z-10">
         <h1 className="font-display font-extrabold text-white mb-7 leading-[1.03]" style={{ fontSize: 'clamp(42px, 5.5vw, 72px)' }}>
-          Tour-quality clubs<br />at real-world prices
+          Tour-quality clubs at<br />real-world prices
         </h1>
         <a
           href="/shop"

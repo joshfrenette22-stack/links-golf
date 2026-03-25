@@ -2,27 +2,27 @@ import ImageWithFallback from '@/components/ui/ImageWithFallback'
 import { IMG_CATEGORY_CLUBS } from '@/lib/images'
 
 const links = [
-  { label: 'Drivers & Woods', opacity: '' },
-  { label: 'Irons & Wedges', opacity: 'opacity-70' },
-  { label: 'Putters & Bags', opacity: 'opacity-50' },
+  { label: 'Drivers\n& Woods',  opacity: 'opacity-100', href: '/shop?cat=drivers'  },
+  { label: 'Irons\n& Wedges',   opacity: 'opacity-70',  href: '/shop?cat=irons'    },
+  { label: 'Putters\n& Bags',   opacity: 'opacity-50',  href: '/shop?cat=putters'  },
 ]
 
 export default function CategoryShowcase() {
   return (
     <section id="categories" className="grid grid-cols-1 md:grid-cols-2 min-h-[440px]">
-      <div className="bg-[#1c2e1a] flex items-center justify-end px-16 py-16">
-        <div className="flex flex-col items-end gap-4">
-          {links.map(l => (
+      <div className="bg-[#1c2e1a] flex items-center justify-end px-16 py-16 min-h-[440px]">
+        <nav className="flex flex-col gap-4" aria-label="Shop categories">
+          {links.map(({ label, opacity, href }) => (
             <a
-              key={l.label}
-              href="/shop"
-              className={`font-display font-extrabold text-white hover:opacity-60 transition-opacity ${l.opacity}`}
+              key={label}
+              href={href}
+              className={`font-display font-extrabold text-white text-right leading-[1.1] whitespace-pre-line hover:opacity-60 transition-opacity ${opacity}`}
               style={{ fontSize: 'clamp(26px, 3.5vw, 42px)' }}
             >
-              {l.label}
+              {label}
             </a>
           ))}
-        </div>
+        </nav>
       </div>
       <div className="bg-[#2a2018] relative overflow-hidden min-h-[300px] md:min-h-0">
         <ImageWithFallback

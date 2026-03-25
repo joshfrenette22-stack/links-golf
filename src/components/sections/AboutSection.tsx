@@ -11,10 +11,11 @@ export default function AboutSection() {
         <p className="text-white/75 text-[15px] leading-relaxed mb-8">
           We started LINKS because we believed golfers shouldn&apos;t have to choose between quality and value. Every club on this site has been through our hands first.
         </p>
-        <ul className="space-y-3 mb-10">
+        <ul className="list-none mb-8 space-y-1.5">
           {['Every club personally inspected', 'Honest grading — no surprises', '30-day no-hassle returns'].map(item => (
-            <li key={item} className="flex items-center gap-3 text-white/80 text-[14px]">
-              <span className="text-[#b88c28] font-bold">✓</span> {item}
+            <li key={item} className="flex items-center gap-3 text-[14px] text-white/80 py-1.5">
+              <span className="text-white/40 font-bold text-[13px] shrink-0">✓</span>
+              {item}
             </li>
           ))}
         </ul>

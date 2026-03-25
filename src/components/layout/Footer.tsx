@@ -25,10 +25,15 @@ export default function Footer() {
         {/* Follow Us */}
         <div>
           <h3 className="text-xs font-extrabold uppercase tracking-widest mb-4">Follow Us</h3>
-          <div className="flex gap-3 mt-2">
-            {[Camera, Play, Music2, Globe].map((Icon, i) => (
-              <a key={i} href="#" className="w-9 h-9 flex items-center justify-center border border-white/30 rounded hover:bg-white/10 transition-colors">
-                <Icon size={16} />
+          <div className="flex gap-4 mt-1">
+            {[
+              { Icon: Camera, label: 'Instagram' },
+              { Icon: Play,   label: 'YouTube'   },
+              { Icon: Music2, label: 'TikTok'    },
+              { Icon: Globe,  label: 'X'         },
+            ].map(({ Icon, label }) => (
+              <a key={label} href="#" aria-label={label} className="text-white/75 hover:text-white transition-colors">
+                <Icon size={18} />
               </a>
             ))}
           </div>
@@ -37,14 +42,17 @@ export default function Footer() {
         <div>
           <h3 className="text-xs font-extrabold uppercase tracking-widest mb-4">Newsletter</h3>
           <p className="text-sm text-white/70 mb-4">Get the latest deals and drops.</p>
-          <div className="flex">
+          <div className="mt-3 flex border border-white/40">
             <input
               type="email"
-              placeholder="Your email"
-              className="flex-1 px-3 py-2 text-sm text-[#1a1a18] bg-white outline-none"
-              aria-label="Email for newsletter"
+              placeholder="email@example.com"
+              aria-label="Email address for newsletter"
+              className="flex-1 bg-transparent border-none outline-none text-white text-[13px] px-4 py-3 placeholder:text-white/45"
             />
-            <button className="bg-black text-white text-xs uppercase tracking-wider px-4 py-2 hover:bg-[#1a1a18] transition-colors">
+            <button
+              type="submit"
+              className="bg-black text-white text-[11px] font-bold uppercase tracking-[0.1em] px-5 py-3 hover:opacity-80 transition-opacity whitespace-nowrap"
+            >
               Subscribe
             </button>
           </div>

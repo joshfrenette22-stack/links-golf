@@ -7,9 +7,9 @@ export default function TradeInBanner() {
       {/* Club image — floats left */}
       <div className="absolute left-0 top-0 bottom-0 w-[52%] overflow-hidden">
         <ImageWithFallback
-          src={IMG_TRADEIN_DRIVER} alt="Golf club for trade-in"
+          src={IMG_TRADEIN_DRIVER} alt="Golf driver for trade-in"
           fill className="object-contain object-bottom"
-          fallbackColor="#e8e4d8" fallbackLabel="tradein-driver.jpg"
+          fallbackColor="#f0efec" fallbackLabel="tradein-driver.png"
           loading="lazy"
           sizes="52vw"
         />
@@ -20,7 +20,7 @@ export default function TradeInBanner() {
           Trade in.<br />Trade up.
         </h2>
         <p className="text-[15px] text-[#7a7870] max-w-[400px] ml-auto leading-relaxed mb-7 text-center">
-          Get an instant quote for your current clubs. No appointments, no awkward negotiations — just a fair price, fast.
+          Send us your old clubs and get up to 40% off your next purchase. We&apos;ll appraise, list, and ship — you just play better golf.
         </p>
         <a
           href="/sell"

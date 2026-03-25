@@ -1,8 +1,12 @@
+// Collection images
+export const IMG_COLLECTION_DRIVERS = '/images/sections/collection-drivers-woods.jpg'
+export const IMG_COLLECTION_IRONS = '/images/sections/collection-irons-wedges.jpg'
+
 // Section images
 export const IMG_HERO_BG = '/images/sections/hero-bg.jpg'
 export const IMG_HERO_BAG = '/images/sections/hero-bag.jpg'
 export const IMG_INSPECTION_WORKSHOP = '/images/sections/inspection-workshop.jpg'
-export const IMG_TRADEIN_DRIVER = '/images/sections/tradein-driver.jpg'
+export const IMG_TRADEIN_DRIVER = '/images/sections/tradein-driver.png'
 export const IMG_BANNER_CALLAWAY_IRONS = '/images/sections/banner-callaway-irons.jpg'
 export const IMG_BANNER_PUTTERS = '/images/sections/banner-putters.jpg'
 export const IMG_SHOP_INTERIOR = '/images/sections/shop-interior.jpg'

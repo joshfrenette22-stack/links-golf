@@ -1,6 +1,6 @@
 import type { Product, BlogPost, Collection } from '@/types'
 
-export const PRODUCTS: Product[] = [
+export const CAROUSEL_PRODUCTS: Product[] = [
   {
     id: 'callaway-rogue-st',
     name: 'Callaway Rogue ST Max',
@@ -70,6 +70,9 @@ export const PRODUCTS: Product[] = [
     imageSrc: '/images/products/cleveland-rtx6.jpg',
     slug: 'cleveland-rtx6-set',
   },
+]
+
+export const BESTSELLER_PRODUCTS: Product[] = [
   {
     id: 'callaway-paradym',
     name: 'Callaway Paradym',
@@ -142,6 +145,8 @@ export const PRODUCTS: Product[] = [
   },
 ]
 
+export const PRODUCTS: Product[] = [...CAROUSEL_PRODUCTS, ...BESTSELLER_PRODUCTS]
+
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'blog-1',
@@ -177,12 +182,12 @@ export const COLLECTIONS: Collection[] = [
     id: 'drivers-woods',
     name: 'Drivers & Woods',
     subtitle: 'Distance. Forgiveness. Control.',
-    imageSrc: '/images/lifestyle/on-course-tee-shot.jpg',
+    imageSrc: '/images/sections/collection-drivers-woods.jpg',
   },
   {
     id: 'irons-wedges',
     name: 'Irons & Wedges',
     subtitle: 'Precision. Consistency. Feel.',
-    imageSrc: '/images/lifestyle/iron-play-closeup.jpg',
+    imageSrc: '/images/sections/collection-irons-wedges.jpg',
   },
 ]
