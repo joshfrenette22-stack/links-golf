@@ -7,9 +7,9 @@ export default function TradeInBanner() {
       {/* Club image — floats left */}
       <div className="hidden md:block absolute left-0 top-0 bottom-0 w-[52%] overflow-hidden">
         <ImageWithFallback
-          src={IMG_TRADEIN_DRIVER} alt="Golf driver for trade-in"
-          fill className="object-contain object-bottom"
-          fallbackColor="#f0efec" fallbackLabel="tradein-driver.png"
+          src={IMG_TRADEIN_DRIVER} alt="PING irons set available for trade-in"
+          fill className="object-contain object-center"
+          fallbackColor="#f0efec" fallbackLabel="ping-irons.jpg"
           loading="lazy"
           sizes="52vw"
         />

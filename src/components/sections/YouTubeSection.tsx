@@ -15,7 +15,7 @@ export default function YouTubeSection() {
         <p className="text-white/80 text-[14px] leading-relaxed mb-7">
           New videos every Tuesday and Friday. Subscribe and join over 40,000 golfers who trust our gear advice.
         </p>
-        <a href="#" className="inline-block border border-white/60 text-white text-[11px] font-bold uppercase tracking-[0.15em] px-8 py-3.5 hover:bg-white hover:text-[#1a1a18] transition-colors self-start mt-7">
+        <a href="https://www.youtube.com/@linksgolf" target="_blank" rel="noopener noreferrer" className="inline-block border border-white/60 text-white text-[11px] font-bold uppercase tracking-[0.15em] px-8 py-3.5 hover:bg-white hover:text-[#1a1a18] transition-colors self-start mt-7">
           Watch Now
         </a>
       </div>

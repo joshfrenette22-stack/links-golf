@@ -16,12 +16,14 @@ export default function SpotlightBanner() {
         className="absolute inset-0 opacity-[0.03]"
         style={{ background: 'repeating-linear-gradient(45deg, #fff, #fff 30px, transparent 30px, transparent 31px)' }}
       />
-      <h2
-        className="relative z-10 font-display font-black text-white text-center"
-        style={{ fontSize: 'clamp(42px, 7vw, 88px)' }}
-      >
-        Club of the week
-      </h2>
+      <a href="/shop" className="relative z-10 group">
+        <h2
+          className="font-display font-black text-white text-center group-hover:opacity-80 transition-opacity"
+          style={{ fontSize: 'clamp(42px, 7vw, 88px)' }}
+        >
+          Club of the week
+        </h2>
+      </a>
     </section>
   )
 }

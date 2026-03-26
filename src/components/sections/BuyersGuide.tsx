@@ -17,19 +17,21 @@ export default function BuyersGuide() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
         {/* Main image */}
-        <div className="h-[280px] md:h-[480px] relative rounded overflow-hidden">
+        <a href="/guide" className="h-[280px] md:h-[480px] relative rounded overflow-hidden block group">
           <ImageWithFallback
             src={IMG_BUYERS_GUIDE_MAIN} alt="Golfer walking the fairway with a push cart"
-            fill className="object-cover"
+            fill className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
             fallbackColor="#c0b890" fallbackLabel="buyers-guide-main.jpg"
             loading="lazy"
             sizes="33vw"
           />
-        </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+          <p className="absolute bottom-4 left-4 text-white font-extrabold text-base">Read the guide →</p>
+        </a>
         {/* Sub-cards */}
         <div className="md:col-span-2 grid grid-cols-2 gap-4">
           {cards.map(card => (
-            <div key={card.label} className="relative rounded overflow-hidden cursor-pointer group h-[280px] md:h-[480px]">
+            <a key={card.label} href="/guide" className="relative rounded overflow-hidden cursor-pointer group h-[280px] md:h-[480px] block">
               <ImageWithFallback
                 src={card.src} alt={card.label} fill
                 className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
@@ -39,7 +41,7 @@ export default function BuyersGuide() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <p className="absolute bottom-4 left-4 text-white font-extrabold text-base">{card.label}</p>
-            </div>
+            </a>
           ))}
         </div>
       </div>
