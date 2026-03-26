@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useCart } from '@/context/CartContext'
+import { Lock } from 'lucide-react'
 
 const US_STATES = [
   'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA',
@@ -291,7 +292,7 @@ export default function CheckoutPage() {
 
           {/* Trust signals */}
           <div className="flex justify-center gap-4 md:gap-6 mt-4 text-[12px] text-[#7a7870] flex-wrap text-center">
-            <span>🔒 Secure checkout</span>
+            <span className="flex items-center gap-1.5"><Lock size={12} className="flex-shrink-0" /> Secure checkout</span>
             <span>30-day free returns</span>
             <span>Every club inspected &amp; graded</span>
           </div>

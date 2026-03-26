@@ -3,7 +3,7 @@ import { useCart } from '@/context/CartContext'
 import PageHero from '@/components/ui/PageHero'
 import ImageWithFallback from '@/components/ui/ImageWithFallback'
 import ConditionBadge from '@/components/ui/ConditionBadge'
-import { ShoppingBag } from 'lucide-react'
+import { ShoppingBag, Lock, RotateCcw, ShieldCheck } from 'lucide-react'
 
 export default function CartPage() {
   const { items, itemCount, subtotal, removeItem, updateQuantity } = useCart()
@@ -86,9 +86,9 @@ export default function CartPage() {
               Continue Shopping
             </a>
             <div className="flex justify-center gap-4 md:gap-6 mt-6 text-[11px] text-[#7a7870] flex-wrap">
-              <span>🔒 Secure Checkout</span>
-              <span>↩ Free Returns</span>
-              <span>✓ Inspected Clubs</span>
+              <span className="flex items-center gap-1.5"><Lock size={12} className="flex-shrink-0" /> Secure Checkout</span>
+              <span className="flex items-center gap-1.5"><RotateCcw size={12} className="flex-shrink-0" /> Free Returns</span>
+              <span className="flex items-center gap-1.5"><ShieldCheck size={12} className="flex-shrink-0" /> Inspected Clubs</span>
             </div>
           </div>
         )}

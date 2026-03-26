@@ -1,5 +1,6 @@
 import ImageWithFallback from '@/components/ui/ImageWithFallback'
 import { IMG_SHOP_INTERIOR } from '@/lib/images'
+import { Check } from 'lucide-react'
 
 export default function AboutSection() {
   return (
@@ -14,7 +15,7 @@ export default function AboutSection() {
         <ul className="list-none mb-8 space-y-1.5">
           {['Every club personally inspected', 'Honest grading — no surprises', '30-day no-hassle returns'].map(item => (
             <li key={item} className="flex items-center gap-3 text-[14px] text-white/80 py-1.5">
-              <span className="text-white/40 font-bold text-[13px] shrink-0">✓</span>
+              <Check size={13} className="text-white/40 shrink-0" />
               {item}
             </li>
           ))}

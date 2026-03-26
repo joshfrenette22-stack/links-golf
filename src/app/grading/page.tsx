@@ -1,6 +1,6 @@
 import PageHero from '@/components/ui/PageHero'
 import ConditionBadge from '@/components/ui/ConditionBadge'
-import { Ruler, Zap, Shield, Target, CheckSquare, Wind, Weight, AlignCenter, Layers, ScanLine, Eye, Award } from 'lucide-react'
+import { Ruler, Zap, Shield, Target, CheckSquare, Wind, Weight, AlignCenter, Layers, ScanLine, Eye, Award, Check } from 'lucide-react'
 
 const grades = [
   {
@@ -53,7 +53,7 @@ export default function GradingPage() {
             <p className="font-bold text-[14px] mb-4">{g.def}</p>
             <p className="text-[14px] text-[#7a7870] leading-relaxed mb-6">{g.desc}</p>
             <ul className="space-y-1.5">
-              {g.bullets.map(b => <li key={b} className="text-[13px] text-[#7a7870] flex items-start gap-2"><span className="text-[#2e4a2c] shrink-0">✓</span>{b}</li>)}
+              {g.bullets.map(b => <li key={b} className="text-[13px] text-[#7a7870] flex items-start gap-2"><Check size={13} className="text-[#2e4a2c] shrink-0" />{b}</li>)}
             </ul>
             <p className="text-[12px] text-[#7a7870] italic mt-4 pt-4 border-t border-[#e8e6e0]">{g.price}</p>
           </div>

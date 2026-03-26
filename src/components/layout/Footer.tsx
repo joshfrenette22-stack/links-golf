@@ -65,7 +65,7 @@ export default function Footer() {
           <h3 className="text-xs font-extrabold uppercase tracking-widest mb-4">Newsletter</h3>
           <p className="text-sm text-white/70 mb-4">Get the latest deals and drops.</p>
           {subscribed ? (
-            <p className="text-white/80 text-[13px] py-3">You&apos;re on the list! 🎉</p>
+            <p className="text-white/80 text-[13px] py-3">You&apos;re on the list — thank you!</p>
           ) : (
             <div className="mt-3 flex border border-white/40">
               <input

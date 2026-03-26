@@ -1,3 +1,8 @@
+export interface ProductSpec {
+  label: string
+  value: string
+}
+
 export interface Product {
   id: string
   name: string
@@ -12,6 +17,11 @@ export interface Product {
   badge?: string
   imageSrc: string
   slug: string
+  description: string
+  conditionNotes: string
+  specs: ProductSpec[]
+  features: string[]
+  relatedSlugs: string[]
 }
 
 export interface BlogPost {
