@@ -22,12 +22,21 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: 'Smooth Swing Golf Shop — Pre-Owned Golf Equipment',
-  description: 'Tour-quality clubs at real-world prices. Shop inspected pre-owned drivers, irons, wedges, and putters from Titleist, Callaway, TaylorMade, Ping, and Scotty Cameron.',
+  metadataBase: new URL('https://smooth-swing.vercel.app'),
+  title: 'Smooth Swing — Pre-Owned Golf Equipment',
+  description: 'Tour-quality clubs at real-world prices. Shop inspected pre-owned drivers, irons, wedges, and putters from Titleist, Callaway, TaylorMade, PING, and Scotty Cameron.',
   openGraph: {
-    title: 'Smooth Swing Golf Shop — Pre-Owned Golf Equipment',
-    description: 'Tour-quality clubs at real-world prices.',
+    title: 'Smooth Swing — Pre-Owned Golf Equipment',
+    description: 'Tour-quality clubs at real-world prices. Shop inspected pre-owned drivers, irons, wedges, and putters.',
+    url: 'https://smooth-swing.vercel.app',
+    siteName: 'Smooth Swing',
     type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Smooth Swing — Pre-Owned Golf Equipment',
+    description: 'Tour-quality clubs at real-world prices.',
   },
 }
 
