@@ -1,104 +1,72 @@
-const BRANDS = [
+// Real brand logo SVGs supplied by client + text-based fallbacks for remaining brands.
+// CSS filter: brightness(0) makes all logos render as solid black so we can
+// control opacity uniformly regardless of the original fill colour.
+
+const BRANDS: { name: string; src?: string; textSvg?: React.ReactNode; wide?: boolean }[] = [
+  { name: 'Brand 1',        src: '/images/brands/brand-1.svg', wide: true  },
+  { name: 'Brand 2',        src: '/images/brands/brand-2.svg'              },
+  { name: 'Brand 3',        src: '/images/brands/brand-3.svg'              },
+  { name: 'Brand 4',        src: '/images/brands/brand-4.svg', wide: true  },
+  { name: 'Brand 6',        src: '/images/brands/brand-6.svg'              },
   {
-    name: 'Callaway',
-    svg: (
-      <svg viewBox="0 0 160 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
-        <text x="4" y="36" fontFamily="Georgia, serif" fontSize="28" fontWeight="700" fill="currentColor" letterSpacing="-0.5">Callaway</text>
-      </svg>
-    ),
-  },
-  {
-    name: 'PING',
-    svg: (
-      <svg viewBox="0 0 100 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
-        <text x="4" y="36" fontFamily="Arial, sans-serif" fontSize="30" fontWeight="900" fill="currentColor" letterSpacing="4">PING</text>
+    name: 'TaylorMade',
+    textSvg: (
+      <svg viewBox="0 0 200 44" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-7 w-auto">
+        <text x="2" y="33" fontFamily="Arial, sans-serif" fontSize="23" fontWeight="800" fill="currentColor" letterSpacing="0.3">TaylorMade</text>
       </svg>
     ),
   },
   {
     name: 'Titleist',
-    svg: (
-      <svg viewBox="0 0 150 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
-        <text x="4" y="36" fontFamily="Georgia, serif" fontSize="26" fontWeight="700" fill="currentColor" letterSpacing="1">Titleist</text>
+    textSvg: (
+      <svg viewBox="0 0 148 44" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-7 w-auto">
+        <text x="2" y="33" fontFamily="Georgia, serif" fontSize="24" fontWeight="700" fill="currentColor" letterSpacing="1">Titleist</text>
       </svg>
     ),
   },
   {
-    name: 'TaylorMade',
-    svg: (
-      <svg viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
-        <text x="4" y="36" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="800" fill="currentColor" letterSpacing="0.5">TaylorMade</text>
+    name: 'Callaway',
+    textSvg: (
+      <svg viewBox="0 0 158 44" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-7 w-auto">
+        <text x="2" y="33" fontFamily="Georgia, serif" fontSize="26" fontWeight="700" fill="currentColor" letterSpacing="-0.3">Callaway</text>
       </svg>
     ),
   },
   {
     name: 'Cleveland',
-    svg: (
-      <svg viewBox="0 0 170 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
-        <text x="4" y="36" fontFamily="Georgia, serif" fontSize="26" fontWeight="700" fill="currentColor" letterSpacing="0.5">Cleveland</text>
+    textSvg: (
+      <svg viewBox="0 0 168 44" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-7 w-auto">
+        <text x="2" y="33" fontFamily="Georgia, serif" fontSize="24" fontWeight="700" fill="currentColor" letterSpacing="0.4">Cleveland</text>
       </svg>
     ),
   },
   {
     name: 'Cobra',
-    svg: (
-      <svg viewBox="0 0 110 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
-        <text x="4" y="36" fontFamily="Arial, sans-serif" fontSize="28" fontWeight="900" fill="currentColor" letterSpacing="2">COBRA</text>
+    textSvg: (
+      <svg viewBox="0 0 108 44" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-7 w-auto">
+        <text x="2" y="33" fontFamily="Arial, sans-serif" fontSize="26" fontWeight="900" fill="currentColor" letterSpacing="2">COBRA</text>
       </svg>
     ),
   },
   {
     name: 'Mizuno',
-    svg: (
-      <svg viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
-        <text x="4" y="36" fontFamily="Georgia, serif" fontSize="26" fontWeight="700" fill="currentColor" letterSpacing="0.5">Mizuno</text>
-      </svg>
-    ),
-  },
-  {
-    name: 'Scotty Cameron',
-    svg: (
-      <svg viewBox="0 0 240 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
-        <text x="4" y="36" fontFamily="Georgia, serif" fontSize="22" fontWeight="700" fill="currentColor" letterSpacing="0.5">Scotty Cameron</text>
-      </svg>
-    ),
-  },
-  {
-    name: 'Odyssey',
-    svg: (
-      <svg viewBox="0 0 140 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
-        <text x="4" y="36" fontFamily="Georgia, serif" fontSize="26" fontWeight="700" fill="currentColor" letterSpacing="0.5">Odyssey</text>
+    textSvg: (
+      <svg viewBox="0 0 126 44" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-7 w-auto">
+        <text x="2" y="33" fontFamily="Georgia, serif" fontSize="24" fontWeight="700" fill="currentColor" letterSpacing="0.4">Mizuno</text>
       </svg>
     ),
   },
   {
     name: 'Wilson',
-    svg: (
-      <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
-        <text x="4" y="36" fontFamily="Arial, sans-serif" fontSize="26" fontWeight="800" fill="currentColor" letterSpacing="1">Wilson</text>
-      </svg>
-    ),
-  },
-  {
-    name: 'Srixon',
-    svg: (
-      <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
-        <text x="4" y="36" fontFamily="Arial, sans-serif" fontSize="26" fontWeight="800" fill="currentColor" letterSpacing="1">Srixon</text>
-      </svg>
-    ),
-  },
-  {
-    name: 'Vokey',
-    svg: (
-      <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
-        <text x="4" y="36" fontFamily="Georgia, serif" fontSize="26" fontWeight="700" fill="currentColor" letterSpacing="0.5">Vokey</text>
+    textSvg: (
+      <svg viewBox="0 0 116 44" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-7 w-auto">
+        <text x="2" y="33" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="800" fill="currentColor" letterSpacing="1">Wilson</text>
       </svg>
     ),
   },
 ]
 
 export default function BrandCarousel() {
-  // Duplicate for seamless infinite scroll
   const items = [...BRANDS, ...BRANDS]
 
   return (
@@ -109,16 +77,29 @@ export default function BrandCarousel() {
         </p>
       </div>
 
-      {/* Marquee track */}
       <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
         <div className="flex gap-14 animate-marquee whitespace-nowrap items-center">
           {items.map((brand, i) => (
             <div
               key={`${brand.name}-${i}`}
-              className="text-[#b0aa9e] hover:text-[#1a1a18] transition-colors duration-200 shrink-0 cursor-default select-none"
+              className={`shrink-0 cursor-default select-none flex items-center transition-all duration-200 ${
+                brand.src
+                  ? 'opacity-30 hover:opacity-75'
+                  : 'text-[#b0aa9e] hover:text-[#1a1a18]'
+              } ${brand.wide ? 'w-36' : 'w-20'}`}
               title={brand.name}
             >
-              {brand.svg}
+              {brand.src ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={brand.src}
+                  alt={brand.name}
+                  className="w-full h-8 object-contain brightness-0"
+                  loading="lazy"
+                />
+              ) : (
+                brand.textSvg
+              )}
             </div>
           ))}
         </div>
@@ -130,7 +111,7 @@ export default function BrandCarousel() {
           100% { transform: translateX(-50%); }
         }
         .animate-marquee {
-          animation: marquee 32s linear infinite;
+          animation: marquee 36s linear infinite;
         }
         .animate-marquee:hover {
           animation-play-state: paused;
