@@ -29,17 +29,17 @@ export default function ProductCard({ product, size = 'sm' }: Props) {
 
   return (
     <div className="bg-white rounded overflow-hidden hover:shadow-md transition-shadow duration-200">
-      <div className={`${h} relative overflow-hidden`}>
+      <a href={`/products/${product.slug}`} className={`${h} relative overflow-hidden block group`}>
         {product.badge && <SectionBadge label={product.badge} variant={badgeVariant} />}
         <ImageWithFallback
           src={product.imageSrc} alt={product.name} fill
-          className="object-contain p-4"
+          className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
           fallbackColor={fallback}
           fallbackLabel={`${product.id}.jpg`}
           loading="lazy"
           sizes="(max-width: 768px) 50vw, 25vw"
         />
-      </div>
+      </a>
       <div className="bg-white px-4 pt-4 pb-5">
         <p className="text-sm font-semibold text-center">{product.name}</p>
         <p className="text-xs text-[#7a7870] text-center mt-0.5">{product.type}{product.spec ? ` · ${product.spec}` : ''}</p>

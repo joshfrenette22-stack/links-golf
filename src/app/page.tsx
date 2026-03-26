@@ -1,5 +1,6 @@
 import Hero from '@/components/sections/Hero'
 import CollectionTiles from '@/components/sections/CollectionTiles'
+import BrandCarousel from '@/components/sections/BrandCarousel'
 import ProductCarousel from '@/components/sections/ProductCarousel'
 import InspectionSplit from '@/components/sections/InspectionSplit'
 import TradeInBanner from '@/components/sections/TradeInBanner'
@@ -20,6 +21,7 @@ export default function Home() {
     <>
       <Hero />
       <CollectionTiles />
+      <BrandCarousel />
       <ProductCarousel />
       <hr className="mx-12 border-[#e8e6e0]" />
       <InspectionSplit />
