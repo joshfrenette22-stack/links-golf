@@ -3,15 +3,15 @@ import { IMG_TRADEIN_DRIVER } from '@/lib/images'
 
 export default function TradeInBanner() {
   return (
-    <section id="trade-in" className="mt-12 relative min-h-[480px] overflow-hidden bg-white flex items-center">
-      {/* Club image — floats left */}
-      <div className="hidden md:block absolute left-0 top-0 bottom-0 w-[55%] overflow-hidden">
+    <section id="trade-in" className="mt-12 relative min-h-[480px] overflow-hidden bg-[#f0efec] flex items-center">
+      {/* Club image — transparent PNG floats over section background */}
+      <div className="hidden md:block absolute left-0 top-0 bottom-0 w-[56%] overflow-hidden">
         <ImageWithFallback
           src={IMG_TRADEIN_DRIVER} alt="PING irons full set fanned out"
-          fill className="object-contain object-left-bottom"
-          fallbackColor="#ffffff" fallbackLabel="ping-irons-fan.jpg"
+          fill className="object-contain object-center"
+          fallbackColor="#f0efec" fallbackLabel="ping-irons-fan.png"
           loading="lazy"
-          sizes="55vw"
+          sizes="56vw"
         />
       </div>
       {/* Text zone */}
