@@ -53,7 +53,7 @@ export default function ContactPage() {
         <div>
           {[
             { icon: MapPin, title: 'Visit Us', lines: ['2240 Larimer Street, Denver CO 80205', 'Mon–Sat 9am–6pm · Sun 11am–4pm'], link: 'Get directions →', href: '#' },
-            { icon: Mail, title: 'Email Us', lines: ['hello@linksgolf.com', 'Trade-in: sell@linksgolf.com'], link: 'Send an email →', href: 'mailto:hello@linksgolf.com' },
+            { icon: Mail, title: 'Email Us', lines: ['hello@smoothswinggolf.com', 'Trade-in: sell@smoothswinggolf.com'], link: 'Send an email →', href: 'mailto:hello@smoothswinggolf.com' },
             { icon: Phone, title: 'Call Us', lines: ['(720) 555-0194', 'Mon–Fri 9am–5pm MT'], link: null, href: null },
           ].map(card => (
             <div key={card.title} className="bg-[#f5f3ef] p-6 mb-4">

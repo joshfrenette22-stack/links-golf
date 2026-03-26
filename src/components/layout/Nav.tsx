@@ -27,7 +27,7 @@ export default function Nav() {
 
           {/* Logo */}
           <div className="flex justify-center">
-            <a href="/" className="font-display font-black tracking-[0.28em] text-xl text-[#1a1a18]">LINKS</a>
+            <a href="/" className="font-display font-black tracking-wider text-[17px] text-[#1a1a18] whitespace-nowrap">Smooth Swing</a>
           </div>
 
           {/* Right */}

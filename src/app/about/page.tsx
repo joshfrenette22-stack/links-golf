@@ -5,7 +5,7 @@ import { ShieldCheck, Star, RotateCcw } from 'lucide-react'
 const values = [
   { icon: ShieldCheck, title: 'Honest Grading', body: 'We grade every club ourselves. If we wouldn\'t buy it at that condition, we don\'t list it. Our grades mean something.' },
   { icon: Star, title: 'Premium Quality', body: 'Pre-owned doesn\'t mean second-best. Our selection is curated — we only carry clubs that still deliver tour-level performance.' },
-  { icon: RotateCcw, title: 'Community Focus', body: 'We built LINKS for golfers, not shareholders. Our pricing is fair because we want you to keep coming back, not because we have to.' },
+  { icon: RotateCcw, title: 'Community Focus', body: 'We built Smooth Swing for golfers, not shareholders. Our pricing is fair because we want you to keep coming back, not because we have to.' },
 ]
 
 const team = [
@@ -30,12 +30,12 @@ export default function AboutPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 px-4 md:px-12 py-16 md:py-20 items-center">
         <div>
           <h2 className="font-display font-extrabold text-[28px] md:text-[36px] mb-6">Where it started</h2>
-          <p className="text-[15px] leading-relaxed text-[#7a7870] mb-5">LINKS started in a garage in Denver in 2022. Our founder Marcus Webb had just paid $400 for a used driver described as &quot;excellent condition&quot; — it arrived with a dented crown and a cracked grip. He knew there had to be a better way.</p>
-          <p className="text-[15px] leading-relaxed text-[#7a7870] mb-5">We built LINKS around a single idea: every club we sell has to be exactly what we say it is. No fudging the condition grade to hit a higher price point. No vague descriptions that leave buyers guessing. Just honest gear, fairly priced.</p>
+          <p className="text-[15px] leading-relaxed text-[#7a7870] mb-5">Smooth Swing started in a garage in Denver in 2022. Our founder Marcus Webb had just paid $400 for a used driver described as &quot;excellent condition&quot; — it arrived with a dented crown and a cracked grip. He knew there had to be a better way.</p>
+          <p className="text-[15px] leading-relaxed text-[#7a7870] mb-5">We built Smooth Swing around a single idea: every club we sell has to be exactly what we say it is. No fudging the condition grade to hit a higher price point. No vague descriptions that leave buyers guessing. Just honest gear, fairly priced.</p>
           <p className="text-[15px] leading-relaxed text-[#7a7870]">Two years later, we&apos;ve sold over 4,000 clubs to golfers across the US and Canada. Every single one was inspected in-house before it shipped.</p>
         </div>
         <div className="h-[380px] md:h-[480px] relative rounded overflow-hidden">
-          <ImageWithFallback src="/images/sections/shop-interior.jpg" alt="LINKS Golf shop interior" fill className="object-cover" fallbackColor="#788870" sizes="50vw" />
+          <ImageWithFallback src="/images/sections/shop-interior.jpg" alt="Smooth Swing shop interior" fill className="object-cover" fallbackColor="#788870" sizes="50vw" />
         </div>
       </div>
 

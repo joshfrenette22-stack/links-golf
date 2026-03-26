@@ -9,8 +9,8 @@ export default function TermsPage() {
       <h2>Payment</h2><p>We accept Visa, Mastercard, American Express, PayPal, and Diners Club. All transactions are encrypted.</p>
       <h2>Order Cancellations</h2><p>Orders can be cancelled within 1 hour of placement. After that, the item may already be in processing and cancellation may not be possible.</p>
       <h2>Trade-In Terms</h2><p>Trade-in offers are valid for 7 days. We reserve the right to revise an offer if the item arrives in a different condition than described.</p>
-      <h2>Intellectual Property</h2><p>All content on this site is owned by LINKS Golf. Do not reproduce without written permission.</p>
-      <h2>Limitation of Liability</h2><p>LINKS Golf is not liable for indirect, incidental, or consequential damages arising from use of this site or products purchased.</p>
+      <h2>Intellectual Property</h2><p>All content on this site is owned by Smooth Swing Golf Shop. Do not reproduce without written permission.</p>
+      <h2>Limitation of Liability</h2><p>Smooth Swing Golf Shop is not liable for indirect, incidental, or consequential damages arising from use of this site or products purchased.</p>
       <h2>Governing Law</h2><p>These terms are governed by the laws of the State of Colorado.</p>
       <h2>Contact</h2><p>Questions? Email us at <a href="mailto:legal@linksgolf.com">legal@linksgolf.com</a>.</p>
     </PolicyLayout>

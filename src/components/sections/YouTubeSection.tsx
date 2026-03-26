@@ -29,7 +29,7 @@ export default function YouTubeSection() {
       <div className="hidden md:flex bg-[#2e2618] items-center justify-center overflow-hidden">
         <div className="w-[380px] h-[440px] bg-white rounded-sm shadow-[0_20px_60px_rgba(0,0,0,0.4)] relative top-5 overflow-hidden">
           <ImageWithFallback
-            src={IMG_YOUTUBE_THUMBNAIL} alt="LINKS Golf YouTube channel"
+            src={IMG_YOUTUBE_THUMBNAIL} alt="Smooth Swing Golf YouTube channel"
             fill className="object-cover"
             fallbackColor="#d4c8a8" fallbackLabel="youtube-thumbnail.jpg"
             loading="lazy"

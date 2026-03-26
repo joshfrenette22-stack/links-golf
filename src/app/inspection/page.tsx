@@ -131,7 +131,7 @@ export default function InspectionPage() {
       {/* CTA */}
       <div className="text-center py-16 px-4">
         <h2 className="font-display font-extrabold text-[28px] md:text-[32px] mb-4">Ready to shop with confidence?</h2>
-        <p className="text-[#7a7870] text-[15px] mb-8 max-w-[480px] mx-auto">Every club on LINKS has passed our 12-point inspection. No surprises. No guesswork.</p>
+        <p className="text-[#7a7870] text-[15px] mb-8 max-w-[480px] mx-auto">Every club at Smooth Swing has passed our 12-point inspection. No surprises. No guesswork.</p>
         <a
           href="/shop"
           className="inline-block bg-[#1a1a18] text-white text-[11px] font-bold uppercase tracking-[0.15em] px-10 py-4 hover:opacity-80 transition-opacity"

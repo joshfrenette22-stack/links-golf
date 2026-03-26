@@ -9,7 +9,7 @@ export default function AboutSection() {
           Get to know us
         </h2>
         <p className="text-white/75 text-[15px] leading-relaxed mb-8">
-          We started LINKS because we believed golfers shouldn&apos;t have to choose between quality and value. Every club on this site has been through our hands first.
+          We started Smooth Swing because we believed golfers shouldn&apos;t have to choose between quality and value. Every club on this site has been through our hands first.
         </p>
         <ul className="list-none mb-8 space-y-1.5">
           {['Every club personally inspected', 'Honest grading — no surprises', '30-day no-hassle returns'].map(item => (
@@ -25,7 +25,7 @@ export default function AboutSection() {
       </div>
       <div className="hidden md:block relative md:min-h-0">
         <ImageWithFallback
-          src={IMG_SHOP_INTERIOR} alt="LINKS Golf shop interior"
+          src={IMG_SHOP_INTERIOR} alt="Smooth Swing shop interior"
           fill className="object-cover"
           fallbackColor="#788870" fallbackLabel="shop-interior.jpg"
           loading="lazy"

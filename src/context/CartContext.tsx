@@ -38,7 +38,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     try {
-      const stored = localStorage.getItem('links_cart')
+      const stored = localStorage.getItem('smooth_swing_cart')
       if (stored) {
         const parsed: CartItem[] = JSON.parse(stored)
         if (parsed.length > 0) {
@@ -55,7 +55,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, [])
 
   useEffect(() => {
-    localStorage.setItem('links_cart', JSON.stringify(items))
+    localStorage.setItem('smooth_swing_cart', JSON.stringify(items))
   }, [items])
 
   const itemCount = items.reduce((sum, i) => sum + i.quantity, 0)

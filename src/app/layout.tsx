@@ -22,10 +22,10 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: 'LINKS — Pre-Owned Golf Equipment',
+  title: 'Smooth Swing Golf Shop — Pre-Owned Golf Equipment',
   description: 'Tour-quality clubs at real-world prices. Shop inspected pre-owned drivers, irons, wedges, and putters from Titleist, Callaway, TaylorMade, Ping, and Scotty Cameron.',
   openGraph: {
-    title: 'LINKS — Pre-Owned Golf Equipment',
+    title: 'Smooth Swing Golf Shop — Pre-Owned Golf Equipment',
     description: 'Tour-quality clubs at real-world prices.',
     type: 'website',
   },

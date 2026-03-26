@@ -28,19 +28,19 @@ export default function OrderConfirmationPage() {
   useEffect(() => {
     // Read cart before clearing
     try {
-      const stored = localStorage.getItem('links_cart')
+      const stored = localStorage.getItem('smooth_swing_cart')
       if (stored) {
         const items: CartItem[] = JSON.parse(stored)
         setCartItems(items)
         const sub = items.reduce((sum, i) => sum + i.price * i.quantity, 0)
         setCartSubtotal(sub)
-        localStorage.removeItem('links_cart')
+        localStorage.removeItem('smooth_swing_cart')
       }
     } catch {}
 
     // Generate order number
     const digits = Math.floor(10000 + Math.random() * 90000)
-    setOrderNumber(`LG-${digits}`)
+    setOrderNumber(`SS-${digits}`)
 
     // Estimated delivery: 5 business days from today
     const delivery = addBusinessDays(new Date(), 5)

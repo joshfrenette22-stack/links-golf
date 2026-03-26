@@ -93,7 +93,7 @@ export default function Footer() {
           <select className="bg-transparent text-white/70 text-xs border border-white/30 px-2 py-1">
             <option>United States (USD $)</option>
           </select>
-          <span className="text-white/50 text-xs">© 2026 LINKS Golf. All rights reserved.</span>
+          <span className="text-white/50 text-xs">© 2026 Smooth Swing Golf Shop. All rights reserved.</span>
         </div>
         <div className="flex gap-2">
           {['Visa', 'MC', 'Amex', 'PayPal', 'Diners', 'Discover'].map(p => (

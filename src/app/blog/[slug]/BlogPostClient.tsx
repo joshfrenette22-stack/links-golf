@@ -37,7 +37,7 @@ const postContents: Record<string, PostContent> = {
       { type: 'p', text: 'On a pre-owned driver, light wear marks in the center of the face are completely normal and don\'t affect performance. The sweet spot develops a natural polish from repeated contact — this isn\'t damage, it\'s evidence that the club was used properly. Don\'t be put off by this.' },
       { type: 'p', text: 'What you do want to look for are red-flag signs that indicate structural compromise. Deep gouges near the face-body junction, visible dents on the crown, or a cracked hosel are all grounds for rejection. A dented crown can indicate the club was dropped or hit something hard, which may have stressed the internal weighting system. The face itself should flex uniformly — any compromise to that geometry affects ball speed directly.' },
       { type: 'p', text: 'Loft is the other major spec to consider. Most amateur golfers play too low a loft — 10.5° or higher suits the majority of players with swing speeds under 95 mph. The idea that a 9° driver goes further than a 10.5° is usually wrong for recreational golfers. Lower lofts require higher swing speeds to generate sufficient launch angle and spin. Don\'t let ego drive your loft selection.' },
-      { type: 'p', text: 'When you buy from LINKS, every driver in Mint or Good condition has been through our 12-point inspection. The face, shaft, hosel, grip, and overall cosmetics are all assessed before the listing goes live. Our grades mean what we say they mean — if it\'s listed as Good, it performs like a Good club.' },
+      { type: 'p', text: 'When you buy from Smooth Swing, every driver in Mint or Good condition has been through our 12-point inspection. The face, shaft, hosel, grip, and overall cosmetics are all assessed before the listing goes live. Our grades mean what we say they mean — if it\'s listed as Good, it performs like a Good club.' },
       { type: 'p', text: 'Finally, consider adjustability. Many modern drivers have adjustable loft and lie settings via a hosel wrench. Make sure any adjustable weights or hosels are functioning and not stripped. We check this during our inspection and note it clearly — but it\'s worth asking about if you\'re buying from a private seller.' },
     ],
   },
@@ -58,7 +58,7 @@ const postContents: Record<string, PostContent> = {
       { type: 'h2', text: 'What to Check Before You Buy' },
       { type: 'p', text: 'For any pre-owned wedge, the groove inspection is paramount. Look at the face grooves under good lighting — they should have sharp, well-defined edges, not a rounded or polished appearance. Worn grooves look almost shiny in the channel versus the crisp matte lines of sharp grooves.' },
       { type: 'p', text: 'Sole wear is cosmetic. Paint wear on the back and cavity are cosmetic. The one exception is deep scoring on the face outside the groove pattern — that can indicate abnormal contact patterns and may affect the aerodynamics of the clubhead through impact.' },
-      { type: 'p', text: 'All wedges listed on LINKS are physically inspected before listing. We describe groove condition honestly because it\'s the only metric that actually matters for performance.' },
+      { type: 'p', text: 'All wedges listed on Smooth Swing are physically inspected before listing. We describe groove condition honestly because it\'s the only metric that actually matters for performance.' },
     ],
   },
   'complete-bag-under-300': {
@@ -78,7 +78,7 @@ const postContents: Record<string, PostContent> = {
       { type: 'p', text: 'Sand Wedge 56° — $25. A Titleist Vokey SM7 in Fair condition. Same logic as above. The SM7 generates exceptional spin even with visible cosmetic wear. At $25 you are getting tour-level wedge performance.' },
       { type: 'p', text: 'Putter — $45. An Odyssey White Hot Pro in Good condition. Putting accounts for roughly 40% of your strokes in a round. The putter is arguably the single most important club in your bag, yet it\'s where most golfers are willing to compromise the most. Don\'t do this. The White Hot Pro insert is legendary for a reason. At $45 in Good condition, this is exceptional value.' },
       { type: 'h2', text: 'The Final Tally and What We Learned' },
-      { type: 'p', text: 'Total: $320. Slightly over our $300 target, but we got a genuinely playable set that includes tour-caliber wedges and a properly fitted iron set. Compare this to a new budget set from a big-box store at the same price point — the pre-owned LINKS bag wins on performance in every single category.' },
+      { type: 'p', text: 'Total: $320. Slightly over our $300 target, but we got a genuinely playable set that includes tour-caliber wedges and a properly fitted iron set. Compare this to a new budget set from a big-box store at the same price point — the pre-owned Smooth Swing bag wins on performance in every single category.' },
       { type: 'p', text: 'The key lessons: First, irons are where the real savings are in the pre-owned market — the gap between Fair condition and Good is cosmetic, not performance-related. Second, wedges are where you should prioritize groove condition over cosmetics. Third, don\'t overspend on woods — the technology plateau in drivers and fairway woods means a 2-year-old head is barely distinguishable from a new one at recreational swing speeds.' },
       { type: 'p', text: 'If you\'re a beginner or high-handicapper building your first real bag, this approach beats a full new set from a big-box store in every way: better brand names, better performance technology, more forgiveness, and lower cost. The only thing you give up is the new-club smell — and that wears off after the first round anyway.' },
     ],
@@ -98,7 +98,7 @@ export default function BlogPostClient({ slug }: { slug: string }) {
     <div className="max-w-[720px] mx-auto px-4 md:px-6 py-12 md:py-16">
       <p className="text-[12px] text-[#7a7870] mb-3">Golf Tips · {post.date}</p>
       <h1 className="font-display font-extrabold leading-tight mb-4" style={{ fontSize: 'clamp(28px, 4vw, 42px)' }}>{post.title}</h1>
-      <p className="text-[13px] text-[#7a7870] mb-8">By LINKS Team · {post.readTime} read · {post.date}</p>
+      <p className="text-[13px] text-[#7a7870] mb-8">By Smooth Swing Editorial Team · {post.readTime} read · {post.date}</p>
       <div className="h-[260px] md:h-[400px] relative rounded overflow-hidden mb-10">
         <ImageWithFallback src={post.imageSrc} alt={post.title} fill className="object-cover" fallbackColor={fallback} sizes="720px" />
       </div>

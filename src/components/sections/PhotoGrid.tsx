@@ -1,10 +1,10 @@
 import ImageWithFallback from '@/components/ui/ImageWithFallback'
 
 const cells = [
-  { img: '/images/lifestyle/on-course-tee-shot.jpg', product: 'Ping G430 Max', price: 'From $199.99', fallback: '#c0d4b0', label: 'on-course-tee-shot.jpg', href: '/products/ping-g430-irons' },
-  { img: '/images/lifestyle/iron-play-closeup.jpg', product: 'Titleist T200 Irons', price: '$289.99', was: '$449.99', fallback: '#d0c8b8', label: 'iron-play-closeup.jpg', href: '/shop?cat=irons' },
-  { img: '/images/lifestyle/bag-in-cart.jpg', product: 'Titleist Staff Bag', price: 'From $129.99', fallback: '#c8d8c0', label: 'bag-in-cart.jpg', href: '/shop' },
-  { img: '/images/lifestyle/putting-green-read.jpg', product: 'Scotty Cameron Select', price: 'From $229.99', fallback: '#d8d0c0', label: 'putting-green-read.jpg', href: '/products/scotty-cameron-white-hot' },
+  { img: '/images/lifestyle/on-course-tee-shot.jpg', product: 'Ping G430 Max', price: 'From $199.99', fallback: '#c0d4b0', label: 'on-course-tee-shot.jpg', href: '/shop?category=irons' },
+  { img: '/images/lifestyle/iron-play-closeup.jpg', product: 'Titleist T200 Irons', price: '$289.99', was: '$449.99', fallback: '#d0c8b8', label: 'iron-play-closeup.jpg', href: '/shop?category=irons' },
+  { img: '/images/lifestyle/bag-in-cart.jpg', product: 'Titleist Staff Bag', price: 'From $129.99', fallback: '#c8d8c0', label: 'bag-in-cart.jpg', href: '/shop?category=bags' },
+  { img: '/images/lifestyle/putting-green-read.jpg', product: 'Scotty Cameron Select', price: 'From $229.99', fallback: '#d8d0c0', label: 'putting-green-read.jpg', href: '/shop?category=putters' },
 ]
 
 export default function PhotoGrid() {
