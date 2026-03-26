@@ -16,6 +16,7 @@ export default function Nav() {
             <a href="/shop" className="text-[13px] font-semibold hover:opacity-50 transition-opacity">Shop</a>
             <a href="/sell" className="text-[13px] font-semibold hover:opacity-50 transition-opacity">Sell Your Clubs</a>
             <a href="/guide" className="text-[13px] font-semibold hover:opacity-50 transition-opacity">Buying Guide</a>
+            <a href="/about" className="text-[13px] font-semibold hover:opacity-50 transition-opacity">Our Story</a>
           </div>
           <button
             className="md:hidden w-9 h-9 flex items-center justify-center hover:bg-[#e8e6e0] rounded transition-colors"
@@ -67,6 +68,7 @@ export default function Nav() {
               { label: 'Shop', href: '/shop' },
               { label: 'Sell Your Clubs', href: '/sell' },
               { label: 'Buying Guide', href: '/guide' },
+              { label: 'Our Story', href: '/about' },
             ].map(link => (
               <a
                 key={link.href}
