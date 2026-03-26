@@ -24,18 +24,38 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | null>(null)
 
+const DEMO_SEED: CartItem = {
+  productId: 'callaway-rogue-st',
+  name: 'Callaway Rogue ST Max',
+  imageSrc: '/images/products/callaway-rogue-st.jpg',
+  price: 149.99,
+  condition: 'Mint',
+  quantity: 1,
+}
+
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([])
 
   useEffect(() => {
     try {
-      const stored = localStorage.getItem('links-golf-cart')
-      if (stored) setItems(JSON.parse(stored))
-    } catch {}
+      const stored = localStorage.getItem('links_cart')
+      if (stored) {
+        const parsed: CartItem[] = JSON.parse(stored)
+        if (parsed.length > 0) {
+          setItems(parsed)
+        } else {
+          setItems([DEMO_SEED])
+        }
+      } else {
+        setItems([DEMO_SEED])
+      }
+    } catch {
+      setItems([DEMO_SEED])
+    }
   }, [])
 
   useEffect(() => {
-    localStorage.setItem('links-golf-cart', JSON.stringify(items))
+    localStorage.setItem('links_cart', JSON.stringify(items))
   }, [items])
 
   const itemCount = items.reduce((sum, i) => sum + i.quantity, 0)

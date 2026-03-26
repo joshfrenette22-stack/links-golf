@@ -29,6 +29,7 @@ const categories = [
       { q: 'What does "Fair" condition mean?', a: 'Fair clubs show visible wear from regular play but are fully functional. Performance is not compromised.' },
       { q: 'Do clubs come with original headcovers?', a: 'We include headcovers when available. Each listing specifies whether headcovers are included.' },
       { q: 'Are the clubs regripped?', a: 'Grips are described in the listing. Mint clubs have original grips. Fair clubs may benefit from regripping.' },
+      { q: 'Can I trust the condition descriptions?', a: 'Yes. Every club listed on LINKS has been physically inspected by our team. We describe what we see, not what we hope to see. Our 30-day return policy exists precisely because we stand behind our grades.' },
     ],
   },
   {
@@ -37,6 +38,7 @@ const categories = [
       { q: 'How does the trade-in program work?', a: 'Submit your club details via our Sell page. We\'ll send a fair offer within 24 hours. Accept, ship free, get paid.' },
       { q: 'How long does it take to get an offer?', a: 'We review submissions and respond within 24 hours during business days.' },
       { q: 'What happens if my club is in worse condition than I described?', a: 'We\'ll contact you and may revise the offer. We\'re transparent about our reasoning.' },
+      { q: 'What clubs do you accept?', a: 'We accept clubs from all major brands in Good or Mint condition. Drivers, irons, wedges, putters, and complete sets are all eligible. We generally don\'t accept clubs older than 10 years or those with structural damage.' },
     ],
   },
   {
@@ -58,7 +60,7 @@ export default function FAQPage() {
       <PageHero eyebrow="Support" title="Frequently Asked Questions" size="sm" />
       <div className="max-w-[760px] mx-auto px-4 md:px-6 py-16">
         {categories.map(cat => (
-          <div key={cat.title} className="mb-10">
+          <div key={cat.title} id={cat.title === 'Orders & Shipping' ? 'shipping' : undefined} className="mb-10">
             <h2 className="font-display font-extrabold text-[20px] mb-4 text-[#1a1a18]">{cat.title}</h2>
             {cat.faqs.map((faq, j) => {
               const key = `${cat.title}-${j}`

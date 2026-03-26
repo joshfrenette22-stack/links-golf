@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import PageHero from '@/components/ui/PageHero'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import ProductCard from '@/components/ui/ProductCard'
@@ -11,6 +11,19 @@ const sortOptions = ['Featured', 'Price: Low–High', 'Price: High–Low', 'Newe
 export default function ShopPage() {
   const [activeFilter, setActiveFilter] = useState('All')
   const [sort, setSort] = useState('Featured')
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const cat = params.get('category')
+    const map: Record<string, string> = {
+      drivers: 'Drivers',
+      irons: 'Irons',
+      wedges: 'Wedges',
+      putters: 'Putters',
+      bags: 'Bags',
+    }
+    if (cat && map[cat]) setActiveFilter(map[cat])
+  }, [])
 
   const filtered = activeFilter === 'All' ? PRODUCTS
     : activeFilter === 'On Sale' ? PRODUCTS.filter(p => p.originalPrice)

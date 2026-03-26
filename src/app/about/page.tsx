@@ -16,9 +16,9 @@ const team = [
 
 const stats = [
   { value: '4,200+', label: 'Clubs Sold' },
-  { value: '98%', label: 'Customer Satisfaction' },
-  { value: '30-Day', label: 'Returns' },
-  { value: '$0', label: 'Hidden Fees' },
+  { value: '4.9', label: 'Avg Rating' },
+  { value: '3 Years', label: 'In Business' },
+  { value: '12', label: 'Inspection Points' },
 ]
 
 export default function AboutPage() {
@@ -80,6 +80,13 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* CTA */}
+      <div className="text-center py-16 px-4 bg-[#f5f3ef]">
+        <h2 className="font-display font-extrabold text-[28px] md:text-[32px] mb-4">Ready to find your next club?</h2>
+        <p className="text-[#7a7870] text-[15px] mb-8 max-w-[480px] mx-auto">Browse our full inventory of inspected, graded pre-owned equipment.</p>
+        <a href="/shop" className="inline-block bg-[#1a1a18] text-white text-[11px] font-bold uppercase tracking-[0.15em] px-10 py-4 hover:opacity-80 transition-opacity">Shop All Clubs</a>
       </div>
     </>
   )

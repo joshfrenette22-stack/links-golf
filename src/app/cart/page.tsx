@@ -7,7 +7,9 @@ import { ShoppingBag } from 'lucide-react'
 
 export default function CartPage() {
   const { items, itemCount, subtotal, removeItem, updateQuantity } = useCart()
-  const discount = items.reduce((sum, i) => i.originalPrice ? sum + (i.originalPrice - i.price) * i.quantity : sum, 0)
+  const shipping = subtotal >= 75 ? 0 : 9.99
+  const tax = subtotal * 0.08
+  const orderTotal = subtotal + shipping + tax
 
   return (
     <>
@@ -57,12 +59,25 @@ export default function CartPage() {
           <div className="bg-[#f5f3ef] p-8 self-start">
             <h2 className="font-extrabold text-[18px] mb-6">Order Summary</h2>
             <div className="space-y-3 text-[14px] mb-4">
-              <div className="flex justify-between"><span>Subtotal</span><span>${subtotal.toFixed(2)}</span></div>
-              <div className="flex justify-between"><span>Shipping</span><span className="text-[#2e4a2c] font-semibold">Free</span></div>
-              {discount > 0 && <div className="flex justify-between text-[#943020]"><span>Savings</span><span>−${discount.toFixed(2)}</span></div>}
+              <div className="flex justify-between">
+                <span>Subtotal</span>
+                <span>${subtotal.toFixed(2)}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Shipping</span>
+                {shipping === 0
+                  ? <span className="text-[#2e4a2c] font-semibold">FREE</span>
+                  : <span>${shipping.toFixed(2)}</span>
+                }
+              </div>
+              <div className="flex justify-between">
+                <span>Estimated Tax</span>
+                <span>${tax.toFixed(2)}</span>
+              </div>
             </div>
             <div className="border-t border-[#e8e6e0] pt-4 flex justify-between font-extrabold text-[22px]">
-              <span>Total</span><span>${subtotal.toFixed(2)}</span>
+              <span>Order Total</span>
+              <span>${orderTotal.toFixed(2)}</span>
             </div>
             <a href="/checkout" className="block text-center bg-[#1a1a18] text-white text-[11px] font-bold uppercase tracking-[0.15em] py-5 hover:opacity-80 transition-opacity mt-6">
               Proceed to Checkout
