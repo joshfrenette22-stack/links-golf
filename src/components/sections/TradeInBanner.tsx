@@ -1,21 +1,35 @@
-import ImageWithFallback from '@/components/ui/ImageWithFallback'
-import { IMG_TRADEIN_DRIVER } from '@/lib/images'
-
 export default function TradeInBanner() {
   return (
-    <section id="trade-in" className="mt-12 relative min-h-[480px] overflow-hidden bg-[#f0efec] flex items-center">
-      {/* Club image — transparent PNG floats over section background */}
-      <div className="hidden md:block absolute left-0 top-0 bottom-0 w-[56%] overflow-hidden">
-        <ImageWithFallback
-          src={IMG_TRADEIN_DRIVER} alt="PING irons full set fanned out"
-          fill className="object-contain object-center"
-          fallbackColor="#f0efec" fallbackLabel="ping-irons-fan.png"
+    <section id="trade-in" className="mt-12 relative min-h-[520px] overflow-hidden bg-[#f0efec] flex items-end">
+
+      {/* Club image — raw <img> tag preserves PNG alpha, no Next.js optimization pipeline */}
+      <div className="hidden md:block absolute left-0 bottom-0 w-[58%] h-full pointer-events-none select-none">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/products/ping-irons-fan.png"
+          alt="PING irons full set fanned out"
+          className="absolute bottom-0 left-0 w-full h-full object-contain object-bottom"
+          style={{ mixBlendMode: 'multiply' }}
           loading="lazy"
-          sizes="56vw"
+        />
+        {/* Gradient feather — fades clubs into the section background at the bottom */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-28 pointer-events-none"
+          style={{
+            background: 'linear-gradient(to bottom, transparent 0%, #f0efec 100%)',
+          }}
+        />
+        {/* Left edge fade — blends clubs into left side */}
+        <div
+          className="absolute top-0 left-0 bottom-0 w-16 pointer-events-none"
+          style={{
+            background: 'linear-gradient(to right, #f0efec 0%, transparent 100%)',
+          }}
         />
       </div>
-      {/* Text zone */}
-      <div className="w-full md:w-1/2 md:ml-auto px-8 md:pr-[72px] md:pl-8 py-12 md:py-16 text-center md:text-right">
+
+      {/* Text zone — vertically centred in the section */}
+      <div className="w-full md:w-1/2 md:ml-auto px-8 md:pr-[72px] md:pl-8 py-12 md:py-16 text-center md:text-right self-center">
         <h2 className="font-display font-black leading-none mb-4 text-[#1a1a18]" style={{ fontSize: 'clamp(48px, 6vw, 80px)' }}>
           Trade in.<br />Trade up.
         </h2>
@@ -29,6 +43,14 @@ export default function TradeInBanner() {
           Start Your Trade-In
         </a>
       </div>
+
+      {/* Bottom gradient — seamless transition into the section below */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none z-10"
+        style={{
+          background: 'linear-gradient(to bottom, transparent 0%, #f0efec 100%)',
+        }}
+      />
     </section>
   )
 }
