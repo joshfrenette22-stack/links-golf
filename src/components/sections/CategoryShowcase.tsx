@@ -2,9 +2,9 @@ import ImageWithFallback from '@/components/ui/ImageWithFallback'
 import { IMG_CATEGORY_CLUBS } from '@/lib/images'
 
 const links = [
-  { label: 'Drivers\n& Woods',  opacity: 'opacity-100', href: '/shop?cat=drivers'  },
-  { label: 'Irons\n& Wedges',   opacity: 'opacity-70',  href: '/shop?cat=irons'    },
-  { label: 'Putters\n& Bags',   opacity: 'opacity-50',  href: '/shop?cat=putters'  },
+  { label: 'Drivers\n& Woods',  opacity: 'opacity-100', href: '/shop?category=drivers'  },
+  { label: 'Irons\n& Wedges',   opacity: 'opacity-70',  href: '/shop?category=irons'    },
+  { label: 'Putters\n& Bags',   opacity: 'opacity-50',  href: '/shop?category=putters'  },
 ]
 
 export default function CategoryShowcase() {
